@@ -11,8 +11,42 @@
 \usepackage{tcolorbox}
 \usepackage{pifont}
 \usepackage{hyperref}
+\usepackage{lmodern}
 
-%Defined Colors.
+%Predefined colors.
 \definecolor{colorGit}{HTML}{E54B30}
 \definecolor{colorBlue}{HTML}{FFFF00}
 \definecolor{colorNaranja}{HTML}{FE9A2E}
+
+\author{Roberto García Antoranz}
+\title{Hannover-Wolverine Template}
+
+%Set degraded color on left sidebar.
+\makeatletter
+\setbeamertemplate{sidebar canvas \beamer@sidebarside}%
+                  [vertical shading][top=colorGit,bottom=orange]
+\makeatother
+
+%Set style to lstlisting.
+\lstdefinestyle{base}{
+  language=C,
+  emptylines=1,
+  breaklines=true,
+  basicstyle=\ttfamily\color{white},
+  moredelim=**[is][\color{green}]{@}{@},
+}
+
+%Set color on the frames, section and blocks.
+\setbeamercolor{section in sidebar shaded}{fg=white}
+\setbeamercolor{title in sidebar}{fg=white}
+\setbeamercolor{title}{fg=white, bg=colorGit}
+\setbeamercolor{section in sidebar}{bg=colorBlue,fg=black}
+\setbeamercolor{frametitle}{fg=red, bg=colorNaranja}
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!75!black}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\end{document}
